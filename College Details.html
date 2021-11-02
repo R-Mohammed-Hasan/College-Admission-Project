@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> College Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap" rel="stylesheet">
+  </head>
+  <style>
+   .gif{
+     animation: move 6s infinite;
+     vertical-align: middle;
+   }
+   #title::first-letter{
+     font-size: 2em;
+   }
+  #title{
+    width:50%;
+    height:13%;
+    right:20%;
+    background: yellow;
+    position: fixed;
+    top:0;
+    z-index: 100;
+    animation: mymove 5s infinite;
+  }
+  @keyframes mymove{
+      from {background-color: black;}
+      to {background-color: yellow;}
+}
+@keyframes move {
+   50% {
+      -webkit-filter:grayscale(100%);
+      filter: grayscale(100%);
+}
+}
+  a:link{
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+    color:yellow;
+  }
+  a:visited{
+    background-color:white;
+    color:black;
+  }
+  a:hover{
+    color:white;
+    background-color: black;
+    border:2px solid purple;
+  }
+  a:active{
+    border-color:black;
+  }
+    body{
+      background-image:linear-gradient(to bottom,wheat,white,wheat);
+      background-repeat:'no-repeat';
+      background-size:100% 100%;
+      background-attachment:fixed;
+    }
+    h2{
+      width:60%;
+      float:left;
+    }
+    </style>
+<body align="center">
+    <h1 title='About Appa University'>
+      <img src="../html images/university.png" width="60px" height="70px" style="float:left;">
+      <span id="title" style="font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Rampart One', cursive;border:2px solid white;box-shadow:0px 0px 10px;font-size:50px;border-radius:10px;">
+          TEN DOTS UNIVERSITY
+     </span>
+   </h1><br><br><br><br><br><br>
+    <hr color="black" style="top:10%;">
+  <h2>
+    <marquee style="font-style:italic;">
+      <span style="background-color:white;">
+         This is our Home Page . Admissions for 2021-2022 has been started from October 1st. If you want to join our college,
+          then go to the college and meet the officials
+        </span>
+    </marquee>
+  </h2>
+  <br><br>
+  <span style="padding-right:5%;border:'5'; border-color:black">
+    <a href="login.html" target="_blank">LOGIN</a>
+  </span>
+    <span style="padding-right:5%;">
+      <a href="#">HELP</a>
+    </span>
+  <span style="padding-right:5%;border:'5'; border-color:black">
+    <a href="About.html" target="_blank">ABOUT US</a>
+  </span>
+  <span style="padding-right:5%">
+    <a href="Fees.html" target="_blank">COURSE DETAILS</a><br><br><br><br>
+  </span>
+  <h2 title='About our university' style="background-color:white; border-radius:15px;">
+         The first version of TEN DOTS University formed in 1978 and various governments repeatedly kept changing the varsity's
+          structure and affiliation scope.
+   </h2>
+   <img src="../html images/college2.jpg" align='center' width='600px' height='350px'style="vertical-align:middle;">
+   <br><br>
+
+   <h2 style="background-color:white;border-radius:15px;height:70px;margin-left:20px;float:left;">
+     Students spend time only on Books and become stressed. So we are going to change it and make a drastic change on our students.
+   </h2>
+    <img CLASS="gif" src="../Gifs/college.gif">
+   <br><br>
+   <marquee direction=right>
+     <h2>
+        We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
+        <img src="../Gifs/college2.gif" style="vertical-align:middle;"></h2></marquee>
+   <div id="a" style="background-color: black;padding:1%">
+     <img src="../html images/college5.jpg" width='400px' height='400px'>&nbsp
+     <img src="../html images/college6.jpg"  width='400px' height='400px'>&nbsp
+     <img src="../html images/colllege7.jpg" width='400px' height='400px'>&nbsp
+     <img src="../html images/lab.jpg" width='400px' height='400px'>
+</div>
+<br><br><br>
+ <video src="../Downloads/poster.mp4" poster="../Pictures/POSTER.jpg" width='50%' height='30%' controls style="border-radius:15px;">
+   </video>
+</body>
+</html>

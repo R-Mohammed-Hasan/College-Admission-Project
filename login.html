@@ -1,0 +1,83 @@
+<html>
+<head>
+  <title>Login page</title>
+</head>
+<style>
+body{
+  background-image:url('../html images/login.jpeg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#signup{
+  animation: mymove 5s infinite;
+}
+@keyframes mymove{
+  50%{font:25px bold}
+}
+a:link{
+  color:aqua;
+}
+a:hover{
+  border:2px solid black;
+  background: white;
+  color:red;
+}
+input[type=email]{
+  width:200px;
+  transition: width 3s;
+}
+input{
+  border-radius: 15px;
+}
+input[type=number]{
+  width:200px;
+  transition: width 3s;
+}
+input[type=password]{
+  width:200px;
+  transition: width 3s;
+}
+input[type=email]:hover{
+  width:400px;
+}
+input[type=password]:hover{
+  width:400px;
+}
+input[type=number]:hover{
+  width:400px;
+}
+</style>
+  <body align="center">
+    <h1 color:'white'> Login Page</h1>
+    <hr color="black"><br>
+    <img src="../html images/login.jpg" height=150 width= 150 alt="Login">
+    <br><br><br>
+  <form action="./Student details.html">
+     <table align="center" border="4" height="150px" width='500px' style="background-color:white">
+       <tr>
+         <th>  E-mail Id: </th>
+         <td> <input type="email" name="mail id" placeholder="Your mailid eg.abcd@gmail.com" required></td>
+       </tr><br>
+       <tr>
+         <th>Password:   </th>
+         <td> <input type="password" name="password" placeholder="Password" required></td>
+       </tr>
+       <tr>
+         <th>Phone number:   </th>
+         <td><input type="number" name='number' placeholder="Your Contact number" required></td>
+       </tr>
+    </table><br>
+  <br>
+  <span style="border:5px solid black">
+
+      <input type="submit" name="button" value="Submit">
+
+  </span><br><br>
+  <p>Don't have an account ? </p>
+  <a id="signup" href="Sign up.html" target="_blank"> Sign up here
+  </a>
+  </table>
+</form>
+</body>
+</html>
