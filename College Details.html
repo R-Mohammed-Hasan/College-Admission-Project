@@ -12,17 +12,11 @@
      animation: move 6s infinite;
      vertical-align: middle;
    }
-   #title::first-letter{
-     font-size: 2em;
-   }
   #title{
     width:50%;
-    height:13%;
-    right:20%;
+    margin-right:20%;
     background: yellow;
-    position: fixed;
     top:0;
-    z-index: 100;
     animation: mymove 5s infinite;
   }
   @keyframes mymove{
@@ -42,12 +36,12 @@
     color:yellow;
   }
   a:visited{
-    background-color:white;
-    color:black;
+    background-color:black;
+    color:white;
   }
   a:hover{
-    color:white;
-    background-color: black;
+    color:black;
+    background-color: white;
     border:2px solid purple;
   }
   a:active{
@@ -66,12 +60,12 @@
     </style>
 <body align="center">
     <h1 title='About Appa University'>
-      <img src="html images/university.png" width="60px" height="70px" style="float:left;">
+      <img src="html images/university.png" width="60px" height="70px" style="float:left;margin-left:24%;">
       <span id="title" style="font-family: 'Barlow Condensed', sans-serif;
-      font-family: 'Rampart One', cursive;border:2px solid white;box-shadow:0px 0px 10px;font-size:50px;border-radius:10px;">
+      font-family: 'Rampart One', cursive;border:2px solid white;box-shadow:0px 0px 10px;font-size:75px;border-radius:10px;">
           TEN DOTS UNIVERSITY
      </span>
-   </h1><br><br><br><br><br><br>
+   </h1>
     <hr color="black" style="top:10%;">
   <h2>
     <marquee style="font-style:italic;">
@@ -118,6 +112,9 @@
 </div>
 <br><br><br>
  <video src="poster.mp4" poster="html images/POSTER.jpg" width='50%' height='30%' controls style="border-radius:15px;">
-   </video>
+ </video><hr color='black'>
+   <footer style="background:white;width:100%;height:20%;line-height:30px;align:left;">Ten Dots University.  © All Copyrights reserved.<br>
+   <img src="html images/call.png" width="20px" height="20px">&nbsp&nbspContact No:9876543210<br>
+   <img src="html images/mail.jpg" width="20px" height="20px">&nbsp&nbspE-mail: tendots.univ@gmail.com</footer>
 </body>
 </html>
