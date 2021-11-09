@@ -1,0 +1,49 @@
+.gif{
+  animation: move 6s infinite;
+  vertical-align: middle;
+}
+#title{
+ width:50%;
+ margin-right:20%;
+ background: yellow;
+ top:0;
+ animation: mymove 5s infinite;
+}
+@keyframes mymove{
+   from {background-color: black;}
+   to {background-color: yellow;}
+}
+@keyframes move {
+50% {
+   -webkit-filter:grayscale(100%);
+   filter: grayscale(100%);
+}
+}
+a:link{
+ background-color: black;
+ padding: 5px;
+ border-radius: 10px;
+ color:yellow;
+}
+a:visited{
+ background-color:black;
+ color:white;
+}
+a:hover{
+ color:black;
+ background-color: white;
+ border:2px solid purple;
+}
+a:active{
+ border-color:black;
+}
+ body{
+   background-image:linear-gradient(#FFEBCD,white,#FFEBCD);
+   background-repeat:'no-repeat';
+   background-size:100% 100%;
+   background-attachment:fixed;
+ }
+ h2{
+   width:60%;
+   float:left;
+ }

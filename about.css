@@ -1,0 +1,29 @@
+#about{
+  background-color:aqua;
+  margin:0;
+  border-radius: 10px;
+  color:white;
+  animation: move 5s infinite;
+  padding:5px;
+}
+@keyframes move {
+50% {color:black;}
+}
+p{
+  background-color:white;
+  border-radius:15px;
+  width:50%;
+  font-size:20px;
+  line-height:1.5;
+  float:left;
+  animation: mymove 3s infinite;
+  text-align:center;
+  padding:15px;
+}
+@keyframes mymove {
+  30%{box-shadow: 10px 10px 20px black;}
+}
+div img{
+  margin-left:200px;
+  vertical-align: middle;
+}

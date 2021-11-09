@@ -1,0 +1,52 @@
+body{
+  background-image:url('html images/login.jpeg');
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+#signup{
+  animation: mymove 2s infinite;
+}
+@keyframes mymove{
+  50%{font:20px bold}
+}
+#forgot,#signup:link{
+  color:blue;
+}
+#forgot:hover{
+    border:2px solid black;
+    background: white;
+    color:red;
+  }
+#signup:hover{
+  border:2px solid black;
+  background: white;
+  color:red;
+}
+input[type=email]{
+  width:200px;
+  transition: width 2s;
+  padding:5px;
+}
+input{
+  border-radius: 15px;
+  padding:5px;
+
+}
+input[type=number]{
+  width:200px;
+  transition: width 2s;
+}
+input[type=password]{
+  width:200px;
+  transition: width 2s;
+}
+input[type=email]:hover{
+  width:300px;
+}
+input[type=password]:hover{
+  width:300px;
+}
+input[type=number]:hover{
+  width:300px;
+}
