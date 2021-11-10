@@ -1,3 +1,4 @@
+
 .gif{
   animation: move 6s infinite;
   vertical-align: middle;
@@ -6,6 +7,7 @@
  width:50%;
  margin-right:20%;
  background: yellow;
+ border-radius: 20px;
  top:0;
  animation: mymove 5s infinite;
 }
@@ -38,12 +40,27 @@ a:active{
  border-color:black;
 }
  body{
-   background-image:linear-gradient(#FFEBCD,white,#FFEBCD);
+   background-image:linear-gradient(#FFEBCD,white,#FFEBCD,white);
    background-repeat:'no-repeat';
    background-size:100% 100%;
-   background-attachment:fixed;
+   background-attachment:scroll;
  }
  h2{
    width:60%;
    float:left;
  }
+ img{
+   border-radius: 20px;
+   box-shadow: 10px 10px 20px black;
+ }
+figcaption{
+  font-size:20px;
+}
+.left{
+  float:left;
+  position: relative;
+  left:10%;
+}
+#a img:hover{
+  opacity: 70%;
+}
