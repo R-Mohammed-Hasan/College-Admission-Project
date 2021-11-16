@@ -11,15 +11,15 @@
     overflow-x:hidden;
   }
    form > input{
-    padding:5px;
+    padding:7px;
     width:200px;
     border-radius:15px;
-    transition:width 2s;
+    transition:width 1s;
   }
   a:hover{
     color:white;
     background: black;
-    padding:5px;
+    padding:7px;
   }
   form input[type="text"]:hover,input[type="email"]:hover,input[type="date"]:hover,input[type="password"]:hover,input[type="number"]:hover{
     width:300px;
@@ -37,9 +37,10 @@
       <br><br>
       E-mail Id:  <input type="email" name="email"placeholder="Your mail Id   eg.abcd@gmail.com" required>
       <br><br>
-      D.O.B  :<input type="date" min="" name="dob" required>
+      D.O.B  :<input type="date" min="1990-12-20" max="2022-01-01" name="dob" required>
       <br><br>
       Password:  <input type="password" name="password" placeholder="Enter your password"required>
+    &nbsp; <img style="position:absolute;" onclick="show()" src="html images/eye.svg">
       <br><br>
       Confirm Password: <input type="password" name="pass" placeholder="Re-Enter your password" required>
       <br><br>
@@ -51,7 +52,7 @@
       <input type="reset" name="reset" value="Reset" style="padding:5px;margin-left:20px;border:2px solid black;"></p>
     </form>
     <div align=center><br>
-      <a href="College Details.html" target="_blank">Click here for more info
+      <a href="index.html" target="_blank">Click here for more info
       </a></div>
     </body>
   </html>

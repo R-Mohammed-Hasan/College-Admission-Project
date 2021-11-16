@@ -11,9 +11,20 @@
       background-size: 100% 150%;
       background-position:'fix';
   }
+  .title{
+       color:white;
+       font-size:60px;
+       font-weight: bold;
+       animation: mymove 5s infinite;
+       padding: 10px;
+       border-radius: 10px;
+  }
+  @keyframes mymove{
+      50% {box-shadow: 0px 0px 50px yellow;}
+  }
   </style>
-  <body align='center' >
-    <h1 style="color:white;font-size:50px;">Admission Form</h1>
+  <body align='center' ><br>
+    <span class="title">Admission Form</span>
     <br><br><hr><br><br><br>
     <h2 style="color:white">
       Fill Student Details
@@ -26,7 +37,7 @@
     </tr><br>
     <tr>
       <th>D.O.B:</th>
-      <td><input type="date" name="age" placeholder="Your age" required></td>
+      <td><input type="date" min="1990-12-20" max="2022-01-01" name="age" placeholder="Your age" required></td>
     </tr>
     <tr>
       <th>E-mail:</th>

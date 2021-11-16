@@ -18,8 +18,7 @@
 @keyframes move {
 50% {
    -webkit-filter:grayscale(100%);
-   filter: grayscale(100%);
-}
+   filter: grayscale(100%);}
 }
 a:link{
  background-color: black;
