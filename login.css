@@ -39,13 +39,13 @@ input[type=number]{
   width:200px;
   transition: width 2s;
 }
-.password{
+#password{
   width:200px;
   transition: width 2s;
   vertical-align: middle;
 }
-.password-show{
-   type:text;
+#password:hover{
+  width:300px;
 }
 input[type=email]:hover{
   width:300px;

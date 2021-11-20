@@ -23,14 +23,17 @@ header{
     animation: mymove 2s infinite;
     border-bottom: 2px solid blue;
 }
+
 .overwrite{
   position: absolute;
+  opacity: 0;
   font-size: 30px;
   left:38%;
   top:58%;
   z-index: 10;
-  -webkit-filter: blur(.7px);
+  transition: all 1s;
 }
+
 @keyframes mymove{
   from{color:black;}
   to{color:blue;}
@@ -75,7 +78,7 @@ dd:hover {
   line-height:30px;
   letter-spacing:2px;
   box-shadow: 0px 0px 20px;
-  padding:10px;
+  padding:20px;
 }
 p{
   text-indent: 50px;
@@ -86,5 +89,14 @@ p{
   background:url('html images/mechanical.jpg');
   /* left:35%; */
   z-index: 100;
+  transition: all .5s;
 
 }
+.img:hover ~ .overwrite{
+  opacity: 100%;
+}
+.img:hover{
+  background-image: linear-gradient(grey,white,grey);
+  /* filter:brightness(70%); */
+}
+

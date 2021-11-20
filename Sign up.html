@@ -37,14 +37,15 @@
       <br><br>
       E-mail Id:  <input type="email" name="email"placeholder="Your mail Id   eg.abcd@gmail.com" required>
       <br><br>
-      D.O.B  :<input type="date" min="1990-12-20" max="2022-01-01" name="dob" required>
+      D.O.B  :<input type="date" min="2000-12-12" max="2004-01-01" name="dob" required>
       <br><br>
-      Password:  <input type="password" name="password" placeholder="Enter your password"required>
-    &nbsp; <img style="position:absolute;" onclick="show()" src="html images/eye.svg">
+      Password:  <input id="password" type="password" name="password" placeholder="Enter your password"required>
+    &nbsp; <img style="position:absolute;" onclick="show()" src="html images/eye.svg" >
       <br><br>
-      Confirm Password: <input type="password" name="pass" placeholder="Re-Enter your password" required>
+      Confirm Password: <input id="ab" type="password" name="pass" placeholder="Re-Enter your password" required>
+        &nbsp; <img style="position:absolute;" onclick="show1()" src="html images/eye.svg" >
       <br><br>
-      Phone Number:  <input type="number" min="10" max="10" name="number"  placeholder="Enter your number" required>
+      Phone Number:  <input type="number" minlength="9" maxlength="10" name="number"  placeholder="Enter your number" required>
       <br><br>
       Address:   <textarea name="address" rows="4" cols="30" required></textarea>
       <br><br>
@@ -54,5 +55,6 @@
     <div align=center><br>
       <a href="index.html" target="_blank">Click here for more info
       </a></div>
+      <script type="text/javascript" src="login.js"></script>
     </body>
   </html>

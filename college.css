@@ -42,8 +42,36 @@ a:active{
    background-image:linear-gradient(#FFEBCD,white,#FFEBCD,white);
    background-repeat:'no-repeat';
    background-size:100% 100%;
-   background-attachment:scroll;
+   overflow-x: hidden;
  }
+ .hov{
+   position:fixed;
+   left:-140px;
+   top:50%;
+   width:150px;
+   height: 170px;
+   font-size: 25px;
+   text-align: center;
+   background-color: orange;
+   color:black;
+   padding: 10px;
+   border-radius: 10px 10px 0px 0px;
+   border: 2px solid black;
+   transform: rotate(90deg);
+   z-index: 1000;
+   transition: all .25s;
+ }
+ .hov img{
+   transform: rotate(-90deg);
+ }
+ .hov-open{
+   left:0;
+ }
+ .nav-in{
+   font-size: 18px;
+   padding: 7px;
+ }
+
  h2{
    width:60%;
    float:left;
@@ -52,9 +80,9 @@ a:active{
    border-radius: 20px;
    box-shadow: 10px 10px 20px black;
  }
-figcaption{
-  font-size:20px;
-}
+ figcaption{
+   font-size: 25px;
+ }
 .left{
   float:left;
   position: relative;
