@@ -5,8 +5,17 @@ function get(){
   console.log(b.value);
   let c = document.getElementById("number");
   console.log(c.value);
-  //document.get
 }
+function image(){
+  document.getElementById("images").src='html images/eye.svg';
+  }
+
+function image2(){
+    document.getElementById("images").src='html images/eye-close.svg';
+  }
+  document.getElementById("images").onclick='image2()';
+
+
 function show1(){
   let pass = document.getElementById("ab");
   if(pass.type === "password"){
@@ -16,6 +25,7 @@ function show1(){
     pass.type = "password";
   }
 }
+
 function show(){
   let pass = document.getElementById("password");
   if(pass.type === "password"){

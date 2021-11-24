@@ -1,28 +1,28 @@
-/* body{
-  background:url('html images/forgot1.webp') no-repeat ;
+body{
   background-size:cover;
   background-attachment:fixed;
-  background-image: brightness(40%);
-} */
-.bg{
-  background:url('html images/forgot1.webp');
-  filter:brightness(70%);
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-attachment:fixed;
-
+  overflow:  hidden;
+  margin: 0;
 }
+
 .left{
   background:skyblue;
   width:40%;
-  height:50%;
+  height:43%;
   position:absolute;
+  z-index: 100;
   top:25%;
   right:10%;
   border-radius:20px;
   text-align:center;
   font-family: 'Lobster', cursive;
   font-size:20px;
+  /* box-shadow: 0px 0px 40px white; */
+  animation: move 3s infinite;
+
+}
+@keyframes move{
+  50%{box-shadow:0px 0px 50px white;}
 }
 .title::first-letter{
   font-size:60px;
@@ -69,6 +69,7 @@ text-color-decoration:none;
 color:white;
 }
 img{
+position: absolute;
 margin-top:10%;
 margin-left:4%;
 border-radius:60px;
