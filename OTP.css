@@ -3,6 +3,22 @@ body{
   background-size:cover;
   background-attachment:fixed;
 }
+.submit{
+  background:black;
+  border-radius:10px;
+  color:white;
+  font-size:inherit ;
+  border:2px solid white;
+  margin-top:30px;
+  font-family: inherit;
+  padding:9px 13px;
+}
+.submit:hover{
+  border: 2px solid black;
+  background:lightgreen;
+  color:black;
+
+}
 .left{
   background:skyblue;
   width:40%;
@@ -20,7 +36,7 @@ body{
   animation: mymove 3s infinite;
 }
 @keyframes mymove{
-    transform : rotate(90deg);
+    transform:50%{rotate(90deg);}
 }
 input{
   padding:9px;
@@ -62,6 +78,6 @@ background:lightgreen;
 color:black;
 }
 a:visited{
-text-color-decoration:none;
+text-decoration:none;
 color:white;
 }

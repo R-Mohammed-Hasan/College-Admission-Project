@@ -1,28 +1,21 @@
 function get(){
   let a = document.getElementById("password");
-  console.log(a.value);
+
   let b= document.getElementById("mail");
-  console.log(b.value);
+
   let c = document.getElementById("number");
-  console.log(c.value);
 }
-function image(){
-  document.getElementById("images").src='html images/eye.svg';
-  }
-
-function image2(){
-    document.getElementById("images").src='html images/eye-close.svg';
-  }
-  document.getElementById("images").onclick='image2()';
-
-
 function show1(){
   let pass = document.getElementById("ab");
   if(pass.type === "password"){
     pass.type = "text";
+    document.getElementById("images2").src="html images/eye.svg";
+
   }
   else{
     pass.type = "password";
+    document.getElementById("images2").src="html images/eye-close.svg";
+
   }
 }
 
@@ -30,8 +23,12 @@ function show(){
   let pass = document.getElementById("password");
   if(pass.type === "password"){
     pass.type = "text";
+    document.getElementById("images").src="html images/eye.svg";
+
   }
   else{
     pass.type = "password";
+    document.getElementById("images").src="html images/eye-close.svg";
+
   }
 }

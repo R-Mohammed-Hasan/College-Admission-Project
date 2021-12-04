@@ -2,16 +2,9 @@ body{
   font-family:sans-serif;
   overflow-x: hidden;
 }
-.div2{
-  background-image:url('html images/fee.jpg');
-  filter: brightness(5px);
-  width: 100%;
-  height: 140vh;
-  /* margin-left: 32%; */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 110% 130%;
-}
+/* #main{
+  color:orange;
+} */
 header{
   font-style:italic;
   color:blue;
@@ -55,9 +48,16 @@ header{
   box-shadow: 10px -10px 30px;
   float:left;
 }
-a{
+a:link{
   text-decoration: none;
   color:black;
+}
+a:visited{
+  /* text-decoration: none; */
+  color:black;
+}
+a:active{
+  color: orange;
 }
 dd{
   transition: all .4s;

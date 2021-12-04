@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>OTP Verification</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="OTP.css">
-  </head>
-  <body>
-     <div class="left">
-       <h1 class="title">OTP Verification </h1>
-       <hr color='black' width='90%' align ='center'>
-       <h2> OTP has been sent to your number</h2>
-       <input type="tel" maxlength="1">&nbsp;&nbsp;
-       <input type="tel" maxlength="1">&nbsp;&nbsp;
-        <input type="tel" maxlength="1">&nbsp;&nbsp;
-         <input type="tel" maxlength="1">&nbsp;&nbsp;
-       <br>
-       <div style="color:purple;cursor:pointer;margin-top:15px;text-decoration:underline;" onclick="otp()"> Resend OTP.?</div>
-       <br>
-      <a href="">Submit</a>
-     </div>
-     <img src="html images/login.gif" width="40%" height="40%">
-<script type="text/javascript">
-function otp(){
-  alert("Another OTP has been sent to your mobile");
-}
-</script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>OTP Verification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="OTP.css">
+</head>
+
+<body>
+  <form class="left" action="./">
+    <h1 class="title">OTP Verification </h1>
+    <hr color='black' width='90%' align='center'>
+    <h2> OTP has been sent to your number</h2>
+    <input type="number" pattern="[0-9]{1}" required>&nbsp;&nbsp;
+    <input type="tel" maxlength="1" required>&nbsp;&nbsp;
+    <input type="tel" maxlength="1" required>&nbsp;&nbsp;
+    <input type="tel" maxlength="1" required>&nbsp;&nbsp;
+    <br>
+    <div style="color:purple;cursor:pointer;margin-top:15px;text-decoration:underline;" onclick="otp()"> Resend OTP.?
+    </div>
+    <br>
+    <button type="submit" class="submit">Submit</button>
+  </form>
+  <img src="html images/login.gif" width="40%" height="40%">
+  <script type="text/javascript">
+    function otp() {
+      alert("Another OTP has been sent to your mobile");
+    }
+  </script>
+</body>
+
 </html>

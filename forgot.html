@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="forgot,password">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Forgot password</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="forgot.css">
-  </head>
-  <body>
-     <div class="left">
-       <h1 class="title">Forgot Password ! </h1>
-       <hr color='black' width='90%' align ='center'>
-       <h2> Your Mobile Number</h2>
-       <input type="number" id="num" placeholder="Enter your Mobile number">
-       <br>
-      <a href="OTP.html"  onclick="restrict()">Submit</a>
-     </div>
-     <img src="html images/forgot.webp" width="40%" height="53%">
-     <video src="html images/forgot.mp4" width="98%" autoplay muted loop style="z-index:-100;">
 
-<script type="text/javascript">
-function restrict(){
-   let a = document.getElementById("num").value;
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="forgot,password">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Forgot password</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Comfortaa&family=Lobster&family=Rampart+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="forgot.css">
+</head>
 
-   if(a.length<10){
-     alert("Please enter 10 numbers, you have entered less than 10 numbers");
-     location.href="index.html";
-   }
-   else if(a.length>10){
-     alert("Please enter 10 numbers only. You have entered more");
-   }
-   else{
+<body>
+  <form class="left" action="./OTP.html">
+    <h1 class="title">Forgot Password ! </h1>
+    <hr color='black' width='90%' align='center'/>
+    <h2> Your Mobile Number</h2>
+    <input type="text" id="num" maxlength="10" pattern="[0-9]{10}" title="Please enter only numbers and it should be 10 digits" placeholder="Enter your Mobile number" required>
+    <br>
+    <input class="submit" type="submit"/>
+  </form>
+  <img src="html images/forgot.webp" width="40%" height="53%">
+  <video src="html images/forgot.mp4" width="98%" autoplay muted loop style="z-index:-100;">
 
-   }
- }
-</script>
-  </body>
+</body>
+
 </html>

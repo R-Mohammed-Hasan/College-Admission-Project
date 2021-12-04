@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Student Details</title>
-  </head>
-  <style >
-    body{
-      background-image:url('html images/adm2.jpg');
-      background-repeat:'no-repeat';
-      background-size: 100% 150%;
-      background-position:'fix';
+
+<head>
+  <meta charset="utf-8">
+  <title>Student Details</title>
+  <script src="Student details.js"></script>
+</head>
+<style>
+  body {
+    background-image: url('html images/adm2.jpg');
+    background-repeat: 'no-repeat';
+    background-size: 100% 150%;
+    background-position: 'fix';
   }
-  .title{
-       color:white;
-       font-size:60px;
-       font-weight: bold;
-       animation: mymove 5s infinite;
-       padding: 10px;
-       border-radius: 10px;
+
+  .title {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    animation: mymove 5s infinite;
+    padding: 10px;
+    border-radius: 10px;
   }
-  @keyframes mymove{
-      50% {box-shadow: 0px 0px 50px yellow;}
+
+  @keyframes mymove {
+    50% {
+      box-shadow: 0px 0px 50px yellow;
+    }
   }
-  </style>
-  <body align='center' ><br>
-    <span class="title">Admission Form</span>
-    <br><br><hr><br><br><br>
-    <h2 style="color:white">
-      Fill Student Details
-    </h2>
-    <form align=center action="./final.html">
-    <table style="color:white" width='500' height='450'border='2'align="center">
-    <tr>
-      <th>Student Name:</th>
-      <td><input type="text" name="name" placeholder="Your name" required></td>
-    </tr><br>
-    <tr>
-      <th>D.O.B:</th>
-      <td><input type="date" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required></td>
-    </tr>
-    <tr>
-      <th>E-mail:</th>
-      <td><input type="email" name=mail placeholder="Your mail" required></td>
-    </tr>
-    <tr>
-      <th>Phone Number:</th>
-      <td><input type="number" name="number" min="999999999" max="9999999999" placeholder="Your number" required>
-    </tr>
-    <tr>
+</style>
+
+<body align='center'><br>
+  <span class="title">Admission Form</span>
+  <br><br>
+  <hr><br><br><br>
+  <h2 style="color:white">
+    Fill Student Details
+  </h2>
+  <form align=center action="./final.html">
+    <table style="color:white" width='500' height='450' border='2' align="center">
+      <tr>
+        <th>Student Name:</th>
+        <td><input type="text" id="name" name="name" placeholder="Your name" required></td>
+      </tr><br>
+      <tr>
+        <th>D.O.B:</th>
+        <td><input type="date" min="2000-12-12" max="2004-01-01" name="age" placeholder="Your age" required></td>
+      </tr>
+      <tr>
+        <th>E-mail:</th>
+        <td><input type="email" name=mail placeholder="Your mail" required></td>
+      </tr>
+      <tr>
+        <th>Phone Number:</th>
+        <td><input type="number" name="number" min="999999999" max="9999999999" placeholder="Your number" required>
+      </tr>
+      <tr>
         <th>Select state</th>
         <td><select name="state">
-          <option value="statw">--Select--</option>
-          <option value="Tamil Nadu">Tamil Nadu</option>
-          <option value="other">Other states</option></td>
-    </tr>
-    <tr>
-      <th>Courses available:</th>
-      <td><select class="course" name="course">
-      <option value="tech">--Select--</option>
-    <option value="btech">B.Tech</option>
-    <option value="barch">B.Arch</option>
-    <option value="bSc">B.Sc</option>
-    </select></td>
-   </tr>
-   <tr>
-     <th>Upload 10th certificate</th>
-     <td><input type="file" name='10th'></td>
-   </th>
- </tr>
- <tr>
-   <th>Upload 12th certificate</th>
-   <td><input type="file" name='10th'></td>
- </th>
-</tr>
-</table><br><br>
-  <input type="submit" name='submit' value="Submit">
+            <option value="state">--Select--</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="other">Other states</option>
+        </td>
+      </tr>
+      <tr>
+        <th>Courses available:</th>
+        <td><select class="course" name="course">
+            <option value="tech">--Select--</option>
+            <option value="btech">B.Tech</option>
+            <option value="barch">B.Arch</option>
+            <option value="bSc">B.Sc</option>
+          </select></td>
+      </tr>
+      <tr>
+        <th>Upload 10th certificate</th>
+        <td><input type="file" name='10th'></td>
+        </th>
+      </tr>
+      <tr>
+        <th>Upload 12th certificate</th>
+        <td><input type="file" name='10th'></td>
+        </th>
+      </tr>
+    </table><br><br>
+    <input type="submit" name='submit' value="Submit">
   </form>
 
   </a>
-  </body>
+</body>
+
 </html>
