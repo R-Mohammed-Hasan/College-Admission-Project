@@ -1,0 +1,44 @@
+table {
+    border-collapse: collapse;
+    margin: 1%;
+    width: 98%;
+    background-color: rgb(223, 189, 96);
+    font-size: 20px;
+}
+
+tr {
+    text-align: center;
+}
+
+th,
+td {
+    padding: 20px 0px;
+}
+
+.addCourse {
+    position: relative;
+    margin-top: 25px;
+    left: 42%;
+}
+
+.addCourse button {
+    padding: 5px 10px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.filter {
+    margin-left: 45%;
+    padding: 10px;
+}
+
+select {
+    padding: 5px;
+    font-size: 18px;
+}
+
+.filter h2 {
+    margin: 20px;
+}

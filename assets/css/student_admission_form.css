@@ -1,0 +1,32 @@
+body {
+    background: url('../html images/adm2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+    background-position: 'fix';
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+table {
+    border: 3px solid white;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 35%;
+    width: 35%;
+}
+
+th,
+td {
+    padding: 15px 0px;
+}
+
+td {
+    padding: 0px 20px;
+}
+
+.hr {
+    border: 1px solid white;
+}

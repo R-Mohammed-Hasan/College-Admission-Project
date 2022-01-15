@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Review Page</title>
+    <link rel="stylesheet" href="./../assets/css/reviews.css">
+    <link href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="head">
+        <h1> Welcome to our Review Page... !!</h1>
+    </div>
+    <div class="comments">
+        <span>Comments</span>
+        <hr class="hr"><br />
+
+        <form onsubmit="addComments(event)">
+            Your Name : <input id="name" type="text" required>
+            <br><br> Comment : <textarea id="comment" rows="5" cols="30" pattern="[A-Za-z0-9.,;]{10,}" required></textarea><br>
+            <input type="submit" class="addComment" value="Add Comment"> &nbsp;&nbsp;
+            <input type="reset" class="resetComment" value="Delete">
+        </form><br>
+        <div class="filter">
+            <span>Filter</span><br>
+            <div class="filterContent">
+                <input list="filter" id="filterApplied" type="text" placeholder="Sort By" onchange="filter()">
+                <datalist id="filter">
+                    <option value="All Reviews">
+                    <option value="Recently Posted">
+                    <option value="Positive Reviews">
+                    <option value="Negative Reviews">
+
+                </datalist>
+            </div>
+        </div>
+        <br><br>
+        <div id="addingComment">
+        </div>
+        <div class="showing" onclick="getAndDisplay()">..show more</div>
+    </div>
+
+    <div class="support">
+        <div class="reviews">
+            <h1>Reviews</h1>
+            <br>
+            <table>
+                <caption></caption>
+                <tr>
+                    <th scope="col">
+                        Vimal Raj -
+                        <div class="font"> Manager</div>
+                    </th>
+                    <th scope="col">
+                        Prasannah -
+                        <div class="font">Assistant Manager</div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="review">I studied in this college and now I am an IT engineer and I'm proud to say that I'm the manager of Zoho Company </div>
+                    </td>
+                    <td>
+                        <div class="review">This is the best college which I have ever seen because the teacheres are very good and teaching quality is also veyr good. The facilities also provided are very good.</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="col">
+                        Kaushik -
+                        <div class="font">Student</div>
+                    </th>
+                    <th scope="col">
+                        Chitraj Rajan -
+                        <div class="font">Student</div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="review">This is the best college which I have ever seen because the teacheres are very good and teaching quality is also veyr good. The facilities also provided are very good.</div>
+                    </td>
+                    <td>
+                        <div class="review">This is the best college which I have ever seen because the teacheres are very good and teaching quality is also veyr good. The facilities also provided are very good.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col">
+                        Mahalakshmi -
+                        <div class="font">Student</div>
+                    </th>
+                    <th scope="col">
+                        Sangeetha -
+                        <div class="font">Student</div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="review">This is the best college which I have ever seen because the teacheres are very good and teaching quality is also veyr good. The facilities also provided are very good.</div>
+                    </td>
+                    <td>
+                        <div class="review">This is the best college which I have ever seen because the teacheres are very good and teaching quality is also veyr good. The facilities also provided are very good.</div>
+                    </td>
+                </tr>
+                <tr id="reviewPosting">
+
+                </tr>
+            </table><br><br>
+            <a href="https://www.google.com/search?q=anna%20university&ei=Y-u6YbXtKuyWseMP87e9mA8&ved=2ahUKEwikrabn5uf0AhXASmwGHQ0qBVoQvS56BAgeEDQ&uact=5&oq=anna+university&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEEMyCAguEIAEELEDMggIABCABBCxAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMggIABCABBCxAzIOCC4QgAQQsQMQxwEQrwE6BwgAEEcQsAM6BQguEIAEOhEILhCABBCxAxCDARDHARCvAUoECEEYAEoECEYYAFDDBliECWCYDGgBcAB4AIABgQGIAfMBkgEDMC4ymAEAoAEByAEIwAEB&sclient=gws-wiz&tbs=lf:1,lf_ui:1&tbm=lcl&rflfq=1&num=10&rldimm=13183127549632877097&lqi=Cg9hbm5hIHVuaXZlcnNpdHlIsaiIAVohEAAQARgAGAEiD2FubmEgdW5pdmVyc2l0eSoGCAIQABABkgEKdW5pdmVyc2l0eaoBFxABKhMiD2FubmEgdW5pdmVyc2l0eSgA&phdesc=e4Q32iEa0s0&rlst=f#rlfi=hd:;si:13183127549632877097,l,Cg9hbm5hIHVuaXZlcnNpdHlIsaiIAVohEAAQARgAGAEiD2FubmEgdW5pdmVyc2l0eSoGCAIQABABkgEKdW5pdmVyc2l0eaoBFxABKhMiD2FubmEgdW5pdmVyc2l0eSgA,y,e4Q32iEa0s0;mv:[[13.0704485,80.2456682],[12.9411197,80.13374619999999]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:1">
+                See Google reviews ? Click here
+            </a>
+
+        </div>
+
+
+        <br>
+        <h3>Rate Us ..?</h3>
+
+        <div class="container">
+            <div class="post">
+                <div class="text">Thanks for rating us!<br> Sent to Our Management</div>
+                <div class="edit">EDIT</div>
+            </div>
+            <div class="star-widget">
+                <input type="radio" name="rate" id="rate-5">
+                <label for="rate-5" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-4">
+                <label for="rate-4" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-3">
+                <label for="rate-3" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-2">
+                <label for="rate-2" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-1">
+                <label for="rate-1" class="fas fa-star"></label>
+                <form action="#">
+                    <br><br><br>
+                    <header>
+                    </header>
+                    <div class="textarea">
+                        <textarea cols="30" placeholder="Describe your experience.." id="review" value=""></textarea>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+
+    </div>
+    <br><br>
+
+
+    <script type="text/javascript" src="./../assets/js/reviews.js">
+    </script>
+</body>
+
+</html>

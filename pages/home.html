@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/college.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title> College Home Page</title>
+</head>
+
+<body align="center">
+    <div id="top"></div>
+
+    <header>
+        <div class="nav-bar" onclick="navBar()">
+            <em id="icon" class="fas fa-bars"></em>
+            <hr>
+            <div class="nav-head" onclick="hasLoggedIn('Student details.html')">Apply For a Course</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="hasLoggedIn('reviews.html')">Review Us</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="adminError('addCourse.html')">Add Course</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="adminError('adminCourseDetails.html')">Edit Course</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="adminError('adminCourseDetails.html')">Delete Course</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="adminError('displayDetailsToAdmin.html')">View Student Details</div>
+            <hr class="nav-line">
+            <div id="logout" class="logout" onclick="logOut()">
+                <em class="fas fa-sign-out-alt"></em> Logout
+            </div>
+        </div>&nbsp;&nbsp;
+
+        <div class="header first" title="Click on me; not around me">
+            <a href='login.html'><img alt="Login Image" src="../assets/html images/login_icon.svg">LOGIN</a>
+        </div>
+        <div class="header" title="Click on me; not around me">
+            <a href='Sign up.html'><img alt="Sign Up Image" src="../assets/html images/sign_up_icon.svg">SIGN UP</a>
+        </div>
+        <div class="header" title="Click on me; not around me">
+            <a href='reviews.html'><img alt="Support Image" src="../assets/html images/support.svg">REVIEW US</a>
+        </div>
+        <div class="header" title="Click on me; not around me">
+            <a href='About.html'><img alt="About Us" src="../assets/html images/about.svg">ABOUT US</a>
+        </div>
+        <div class="header" title="Click on me; not around me">
+            <div class="dropdown" id="dropdown">
+                <a href="userCourseDetails.html" target="_blank" title="Click me" style="cursor: pointer;padding: 0%;"><img alt="Course Details" src="../assets/html images/courses.png" width="6%">COURSE DETAILS</a>
+                <div class="dropdown-content" id="dropdown-content">
+                    <dl>
+                        <h2>
+                            <dt class="courses_head"><img alt="Arrow Image" src="../assets/html images/arrow.svg"
+                                    style="border:2px solid grey">Engineering Department</dt>
+                        </h2><br><br><br><br>
+                        <hr class="hr">
+                        <dd class="courses"><a href="userCourseDetails.html">Mechanical Engineering</a></dd>
+                        <dd class="courses"><a href="userCourseDetails.html">Civil Engineering</a></dd>
+                        <dd class="courses"><a href="userCourseDetails.html">Computer Engineering</a></dd>
+                        <dd class="courses"><a href="userCourseDetails.html">IT Engineering</a></dd>
+                        <dd class="courses"><a href="userCourseDetails.html">Electrical and Electronics Engineering</a>
+                        </dd>
+                        <dd class="courses"><a href="userCourseDetails.html">Electronics and Communication
+                                Engineering</a></dd>
+                        <h2>
+                            <dt class="courses_head"><img alt="Arrow Image" src="../assets/html images/arrow.svg"
+                                    style="margin-right:10px;border:2px solid grey">Arts Department</dt>
+                        </h2><br><br><br><br>
+                        <hr class="hr">
+                        <dd class="courses"><a href="userCourseDetails.html">Bachelor of Business Administration</a>
+                        </dd>
+                        <dd class="courses"><a href="userCourseDetails.html">Bachelor of Management Studies</a></dd>
+
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+        <div class="header"><img alt="Newsletter" src="../assets/html images/newsletter.png" width="7%">NEWS LETTER
+        </div>
+        <div class="header"><img alt="Notifications" id="notification_icon" src="../assets/html images/notification_on.svg" onclick="notification()">NOTIFICATIONS</div>
+        <br /><br /><br /><br />
+    </header>
+    <div class="heading" style="width: 100%;margin-left: 7%;">
+        <h1 title='About Ten Dots University'>
+            <img alt="College Icon" src="../assets/html images/university.png" class="head_image" width="60px" height="70px">
+            <span id="title">
+                    TEN DOTS UNIVERSITY
+                </span>
+            <div class="caption">Do Or Try, Students</div>
+
+        </h1>
+    </div>
+
+    <h2>
+        <div id="marquee1">
+            <span>
+                    Admissions for 2021-2022 has been started from October 1st. If you want to join our college, then go
+                    to
+                    the college and meet the officials
+                </span>
+        </div>
+    </h2>
+    <br /><br />
+
+    <h2 title='About our university' style="background-color:#333;color:white; border-radius:15px;padding:10px;">
+        The first version of TEN DOTS University formed in 1978 and various governments repeatedly kept changing the varsity's structure and affiliation scope.
+    </h2><br><br>
+    <img class="college-image" alt="College Image" src="../assets/html images/college2.jpg" width='600px' height='350px' style="vertical-align:middle;border-radius:15px;">
+    <br /><br />
+
+    <div class="hov" onclick="show()"> Apply Now <img alt="Arrow Image" src="../assets/html images/arrow.svg" style="box-shadow: 0px 0px 15px;">
+        <hr>
+        <p class="nav-in" onclick="hasLoggedIn('Student details.html');"> B.Tech / M.Tech </p>
+        <hr>
+        <p class="nav-in" onclick="hasLoggedIn('Student details.html');">B.E / M.E</p>
+    </div>
+    <h2 style="background-color:#333;color:white;border-radius:15px;height:70px;margin-right:7%;float:right;position:relative;top:100px;padding:10px;">
+        Students spend time only on Books and become stressed. So we are going to change it and make a drastic change on our students.
+    </h2><br />
+    <img CLASS="gif" alt="Gif" src="../assets/Gifs/college.gif">
+    <br />
+    <div class="gifMarquee">
+        <h2 style="background:white;width:70%;border-radius: 20px;">
+            <img alt="Gif" src="../assets/Gifs/college2.gif" style="vertical-align:middle;background:white;"> We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
+        </h2>
+    </div>
+    <a href="#top" class="upGoingArrow">
+        <img src="./../assets/html images/arrow.svg" alt="">
+    </a>
+    <div id="a" style="padding:1%">
+        <figure class="left"><img alt="College Images" src="../assets/html images/college5.jpg" width='400px' height='400px'>&nbsp
+            <br /><br />
+            <figcaption style="color:white;font-weight:500;">Our Class rooms</figcaption>
+        </figure>
+        <figure><img alt="College Images" src="../assets/html images/college6.jpg" width='400px' height='400px'>&nbsp
+            <br /><br />
+            <figcaption style="color:white;font-weight:500;">Our Physics Laboratory</figcaption>
+        </figure><br /><br />
+        <figure class="left"><img alt="College Images" src="../assets/html images/colllege7.jpg" width='400px' height='400px'>&nbsp
+            <br /><br />
+            <figcaption style="color:white;font-weight:500;">Our Library</figcaption>
+        </figure>
+        <figure><img alt="College Images" src="../assets/html images/lab.jpg" width='400px' height='400px'>
+            <br /><br />
+            <figcaption style="color:white;font-weight:500;">Our Chemistry Laboratory</figcaption>
+        </figure>
+
+    </div>
+
+    <br /><br /><br />
+    <video poster="../assets/html images/POSTER.jpg" width='50%' height='30%' controls style="border-radius:15px;">
+
+    <source src="../assets/videos/poster.mp4">
+    <track kind="subtitles"></track>
+    </video>
+
+    <br /><br />
+    <hr class="hr-foot">
+
+    <footer id="foot">
+        Ten Dots University. © All Copyrights reserved.<br />
+        <img alt="Call Icon" src="../assets/html images/call.png" width="20px" height="20px">&nbsp&nbspContact No:9876543210
+        <br />
+        <img alt="Mail Icon" src="../assets/html images/mail.jpg" width="20px" height="20px">&nbsp&nbspE-mail: tendots.univ@gmail.com
+    </footer>
+    <hr class="hr-foot">
+
+
+
+    <script src="./../assets/js/home.js"></script>
+    <script src="./../assets/js/error.js"></script>
+
+</body>
+
+</html>

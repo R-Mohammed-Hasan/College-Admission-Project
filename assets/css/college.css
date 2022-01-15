@@ -1,0 +1,410 @@
+body {
+    background: url('../html images/college1.jpg') no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+#icon {
+    font-size: 40px;
+    text-align: left;
+    display: flex;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.nav-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #333;
+    width: 0%;
+    height: 100vh;
+    border-top-right-radius: 10px;
+    z-index: 100;
+    transition: .5s;
+}
+
+.nav-head {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    font-family: sans-serif;
+    padding: 25px 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.logout {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 25px 0px;
+    margin-top: 30%;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+}
+
+.open {
+    width: 25%;
+}
+
+.nav-line {
+    width: 50%;
+}
+
+header {
+    background-color: #333;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0%;
+    left: 1%;
+    z-index: 100;
+}
+
+.header {
+    padding-top: 27px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header:hover {
+    background-color: #111;
+    color: white;
+    border-radius: 20px;
+    transition: all .5s;
+    transform: translateY(5px);
+}
+
+.header a:link {
+    text-decoration: none;
+    background-color: #333;
+    border: none;
+}
+
+.header a:visited {
+    text-decoration: none;
+    background-color: #333;
+    border: none;
+}
+
+.header a:hover {
+    background-color: #111;
+    color: white;
+}
+
+.header img {
+    vertical-align: bottom;
+    padding: 0px 10px;
+}
+
+.gif {
+    animation: move 6s infinite;
+    vertical-align: middle;
+    float: left;
+    margin-left: 7%;
+}
+
+.gifMarquee {
+    margin-top: 15%;
+    width: 110%;
+    animation: marquee 20s infinite;
+    animation-timing-function: linear;
+}
+
+.gifMarquee img {
+    transform: scaleX(-1);
+}
+
+#title {
+    width: 50%;
+    margin-right: 20%;
+    background: black;
+    border-radius: 20px;
+    color: aliceblue;
+    top: 0;
+    animation: mymove 7s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Rampart One', cursive;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px;
+    font-size: 75px;
+    padding: 10px;
+    text-shadow: 0px 0px 10px white;
+}
+
+.caption {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(131, 134, 138);
+    position: absolute;
+    top: 200px;
+    left: 36%;
+    letter-spacing: 6px;
+}
+
+.head_image {
+    margin-top: 1%;
+    margin-right: 2%;
+}
+
+.college-image:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+@keyframes mymove {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes move {
+    50% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+
+.course_details {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+}
+
+.course_details:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+a:link {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    font-weight: 500;
+}
+
+a:visited {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+a:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.hov {
+    position: fixed;
+    left: -140px;
+    top: 50%;
+    width: 160px;
+    height: 170px;
+    font-size: 25px;
+    text-align: center;
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    transform: rotate(90deg);
+    z-index: 100;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.hov img {
+    transform: rotate(-90deg);
+}
+
+.hov-open {
+    left: 0;
+}
+
+a.upGoingArrow {
+    background-color: white;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+.upGoingArrow {
+    position: sticky;
+    top: 93%;
+    left: 90%;
+    z-index: 10;
+}
+
+.upGoingArrow img {
+    transform: rotate(-90deg);
+    z-index: -10;
+}
+
+.nav-in {
+    font-size: 18px;
+    padding: 8px 5px;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-in:hover {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+
+h2 {
+    width: 60%;
+    float: left;
+}
+
+img {
+    border-radius: 20px;
+}
+
+figcaption {
+    font-size: 25px;
+}
+
+.left {
+    float: left;
+    position: relative;
+    left: 10%;
+    z-index: 1;
+}
+
+#a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px white;
+    transition: .5s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline;
+    z-index: 100;
+}
+
+.dropdown-content {
+    display: none;
+    margin: 2%;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    right: 5%;
+    z-index: 100;
+    top: 10;
+    box-shadow: 0px 0px 20px;
+    border-radius: 3px;
+}
+
+.header:hover .dropdown-content {
+    display: block;
+    transition: all 2s;
+}
+
+.courses {
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+}
+
+.courses a:link,
+.courses a:visited {
+    padding: 5px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.courses a:hover {
+    background: black;
+    color: aliceblue;
+    transition: all .5s;
+}
+
+.courses_head {
+    margin-left: 10px;
+    box-shadow: 0px 0px 20px;
+    color: #111;
+    border-radius: 10px;
+    float: left;
+    padding: 2px 3px;
+}
+
+.courses_head img {
+    vertical-align: middle;
+}
+
+#foot {
+    width: 100%;
+    height: 20%;
+    line-height: 30px;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.hr {
+    color: black;
+    height: 3px;
+    border: 2px solid black;
+}
+
+.hr-foot {
+    color: white;
+    height: 3px;
+}
+
+#marquee1 {
+    font-style: italic;
+    z-index: -10;
+    border-radius: 10px;
+    background-color: white;
+    animation: marquee 20s infinite;
+    animation-timing-function: linear;
+    height: 30px;
+    width: 130%;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#marquee1 span {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    height: 10px;
+}

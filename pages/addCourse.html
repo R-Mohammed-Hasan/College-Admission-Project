@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <link rel="stylesheet" href="./../assets/css/addCourse.css">
+</head>
+
+<body>
+    <div class="form_head">
+        <img alt="Add Course" src="./../assets/html images/course_icon.png" width='3%' height="3%">
+        <h2>Add Course</h2>
+    </div>
+    <form align='center' onsubmit="onSubmitHandler()">
+
+        <div class="label1"> Course Name :
+            <input type="text" id="courseName" pattern="[A-Za-z ]{5,}" required>
+        </div><br /> Course Department :
+        <select name="department" id="courseDepartment">
+            <option value="engineering">Engineering</option>
+            <option value="arts">Arts</option>
+            <option value="integrated">Integrated Course</option>
+
+        </select><br /><br>
+
+        <div class="label2"> Image representing Course :
+            <input type="url" id="image" required>
+        </div><br>
+        <div class="label3">
+            Image Caption :
+            <input type="text" id="caption" pattern="[A-Za-z0-9]{5,}" required>
+        </div>
+        <br>
+        <div class="label4">
+            Course Details :
+            <textarea rows="5" id="details" pattern="[A-Za-z0-9.+-_/ ]{5,}" title="Avoid using special characters"></textarea>
+        </div>
+        <br>
+        <div class="label5">
+            Fee Details <br /><br />
+            <table border="3">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Fee Details</th>
+                        <th scope="col">1st Semester</th>
+                        <th scope="col">2nd Semester</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st Year</td>
+                        <td><input id="1stYearone" type="number" placeholder="Fee amount"></td>
+                        <td><input id="1stYeartwo" type="number" placeholder="Fee amount"></td>
+                    </tr>
+                    <tr>
+                        <td>2nd Year</td>
+                        <td><input id="2ndYearone" type="number" placeholder="Fee amount"></td>
+                        <td><input id="2ndYeartwo" type="number" placeholder="Fee amount"></td>
+                    </tr>
+                    <tr>
+                        <td>3rd Year</td>
+                        <td><input id="3rdYearone" type="number" placeholder="Fee amount"></td>
+                        <td><input id="3rdYeartwo" type="number" placeholder="Fee amount"></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <button class="submit">Add Course</button>
+
+    </form>
+    <script src="./../assets/js/addCourse.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+body {
+    background-image: linear-gradient(45deg, rgb(250, 234, 161), rgb(127, 127, 238));
+    background-repeat: no-repeat;
+    height: 110vh;
+}
+
+.form_head {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+form {
+    border: 2px solid black;
+    width: 600px;
+    margin-left: 35%;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: palegoldenrod;
+}
+
+form input {
+    padding: 10px 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+form input:focus {
+    outline: none;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+input[type="file"]:focus {
+    background-color: white;
+}
+
+.submit {
+    padding: 5px;
+    font-size: 17px;
+    font-weight: 700;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.submit:hover {
+    transition: all .5s;
+    transform: translateY(5px);
+}
+
+.label4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#details {
+    padding: 6px;
+    margin-left: 5px;
+    width: 300px;
+}
+
+select {
+    padding: 5px;
+    font-size: 17px;
+}
+
+option {
+    background-color: rgb(241, 204, 148);
+    padding: 5px 0px;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+#detailsOfCourse {
+    height: 20vh;
+    overflow-y: scroll;
+}

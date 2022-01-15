@@ -1,0 +1,53 @@
+#about {
+    background-color: aqua;
+    margin: 0;
+    border-radius: 10px;
+    color: black;
+    padding: 5px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hr {
+    border: 2px solid black;
+}
+
+p {
+    background-color: white;
+    border-radius: 15px;
+    width: 50%;
+    font-size: 20px;
+    line-height: 1.5;
+    float: left;
+    animation: mymove 3s infinite;
+    text-align: center;
+    padding: 15px;
+}
+
+@keyframes mymove {
+    30% {
+        box-shadow: 10px 10px 20px black;
+    }
+}
+
+div img:not(.slides img) {
+    margin-left: 15%;
+    border-radius: 5%;
+}
+
+.glider-prev,
+.glider-next {
+    margin: 10%;
+    border: 2px solid black;
+}
+
+.glider img {
+    width: 70%;
+}
+
+h1 {
+    margin: 1% 50%;
+    width: 100%;
+}
