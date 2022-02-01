@@ -11,41 +11,67 @@
 
 <body>
     <div class="form_head">
-        <img alt="Add Course" src="./../assets/html images/course_icon.png" width='3%' height="3%">
+        <img alt="Add Course" src="./../assets/images/course_icon.png" width='3%' height="3%">
         <h2>Add Course</h2>
     </div>
-    <form align='center' onsubmit="onSubmitHandler()">
-
-        <div class="label1"> Course Name :
-            <input type="text" id="courseName" pattern="[A-Za-z ]{5,}" required>
-        </div><br /> Course Department :
-        <select name="department" id="courseDepartment">
-            <option value="engineering">Engineering</option>
-            <option value="arts">Arts</option>
-            <option value="integrated">Integrated Course</option>
-
-        </select><br /><br>
-
-        <div class="label2"> Image representing Course :
-            <input type="url" id="image" required>
-        </div><br>
-        <div class="label3">
-            Image Caption :
-            <input type="text" id="caption" pattern="[A-Za-z0-9]{5,}" required>
-        </div>
-        <br>
-        <div class="label4">
-            Course Details :
-            <textarea rows="5" id="details" pattern="[A-Za-z0-9.+-_/ ]{5,}" title="Avoid using special characters"></textarea>
-        </div>
-        <br>
+    <form align='center' onsubmit="onSubmitHandler(event)">
+        <table>
+            <caption></caption>
+            <tr>
+                <th scope="col">
+                    <div class="label1"> Name of the Course :
+                    </div>
+                </th>
+                <td> <input type="text" id="courseName" pattern="[A-Za-z ]{5,}" required>
+                </td>
+            </tr>
+            <tr>
+                <th scope="col"> Department of Course :</th>
+                <td> <select name="department" id="courseDepartment">
+                    <option value="engineering">Engineering</option>
+                    <option value="arts">Arts</option>
+                    <option value="integrated">Integrated Course</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="col">
+                    <div class="label2"> Image representing Course :
+                    </div>
+                </th>
+                <td>
+                    <input type="url" id="image" required>
+                </td>
+            </tr>
+            <tr>
+                <th scope="col">
+                    <div class="label3">
+                        Caption for the Image :
+                    </div>
+                </th>
+                <td>
+                    <input type="text" id="caption" pattern="[A-Za-z0-9]{5,}" required>
+                </td>
+            </tr>
+            <tr>
+                <th scope="col">
+                    <div class="label4"> Details of the Course :
+                    </div>
+                </th>
+                <td>
+                    <textarea rows="7" columns="10000" id="details" pattern="[A-Za-z0-9.+-_/ ]{20,}" title="Avoid using special characters"></textarea>
+                </td>
+            </tr>
+        </table>
         <div class="label5">
-            Fee Details <br /><br />
+            <h2>Fee Details</h2>
             <table border="3">
                 <caption></caption>
                 <thead>
                     <tr>
-                        <th scope="col">Fee Details</th>
+                        <th scope="col">
+                            Fee Details
+                        </th>
                         <th scope="col">1st Semester</th>
                         <th scope="col">2nd Semester</th>
                     </tr>
@@ -70,6 +96,8 @@
                 </tbody>
             </table>
         </div>
+        <br>
+        <div id="errorMessage"></div>
         <br>
         <button class="submit">Add Course</button>
 

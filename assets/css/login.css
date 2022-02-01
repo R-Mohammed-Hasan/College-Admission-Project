@@ -1,8 +1,14 @@
 body {
-    background-image: url('../html images/signup.jpg');
+    background-image: url('../images/signup.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 110%;
+}
+
+.home {
+    float: left;
+    border-radius: 10px;
+    margin-left: 3%;
 }
 
 #signup {

@@ -1,18 +1,50 @@
+/* Header and nav-bar css */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: url('../html images/college1.jpg') no-repeat;
+    background: url('../images/college1.jpg') no-repeat;
     background-position: center;
     background-size: 100% 100%;
     background-attachment: fixed;
     overflow-x: hidden;
 }
 
+h2 {
+    width: 60%;
+    float: left;
+}
+
+.navIcons {
+    display: flex;
+    justify-content: space-between;
+}
+
 #icon {
     font-size: 40px;
     text-align: left;
-    display: flex;
     margin: 10px 20px;
     cursor: pointer;
     border-radius: 10px;
+    transition: 0.5s;
+}
+
+.fas.fa-times {
+    font-size: 40px;
+    text-align: right;
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: none;
+    opacity: 0;
+}
+
+.fas.fa-times.show {
+    opacity: 1;
+    display: inline;
 }
 
 .nav-bar {
@@ -24,17 +56,43 @@ body {
     height: 100vh;
     border-top-right-radius: 10px;
     z-index: 100;
-    transition: .5s;
+    transition: .4s ease-in-out;
+}
+
+.nav-bar.open {
+    width: 25%;
+}
+
+.nav-bar.open .nav-head {
+    opacity: 1;
 }
 
 .nav-head {
     display: flex;
     justify-content: center;
-    font-size: 23px;
+    font-size: 20px;
     font-family: sans-serif;
     padding: 25px 0px;
     overflow: hidden;
     cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+    animation: navHead 3s;
+}
+
+@keyframes navHead {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 50px;
+    }
+}
+
+.nav-head:hover+.nav-line {
+    visibility: visible;
+    width: 50%;
+    transition: all 0.7s;
 }
 
 .logout {
@@ -48,12 +106,9 @@ body {
     cursor: pointer;
 }
 
-.open {
-    width: 25%;
-}
-
 .nav-line {
-    width: 50%;
+    width: 0%;
+    visibility: hidden;
 }
 
 header {
@@ -70,11 +125,21 @@ header {
     z-index: 100;
 }
 
-.header {
+header>.header {
     padding-top: 27px;
     font-size: 18px;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header.first {
+    margin-left: 2%;
+}
+
+.header h2 {
+    width: 70%;
 }
 
 .header:hover {
@@ -107,197 +172,8 @@ header {
     padding: 0px 10px;
 }
 
-.gif {
-    animation: move 6s infinite;
-    vertical-align: middle;
-    float: left;
-    margin-left: 7%;
-}
 
-.gifMarquee {
-    margin-top: 15%;
-    width: 110%;
-    animation: marquee 20s infinite;
-    animation-timing-function: linear;
-}
-
-.gifMarquee img {
-    transform: scaleX(-1);
-}
-
-#title {
-    width: 50%;
-    margin-right: 20%;
-    background: black;
-    border-radius: 20px;
-    color: aliceblue;
-    top: 0;
-    animation: mymove 7s;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-family: 'Rampart One', cursive;
-    border: 2px solid white;
-    box-shadow: 0px 0px 10px;
-    font-size: 75px;
-    padding: 10px;
-    text-shadow: 0px 0px 10px white;
-}
-
-.caption {
-    font-size: 20px;
-    font-family: sans-serif;
-    color: rgb(131, 134, 138);
-    position: absolute;
-    top: 200px;
-    left: 36%;
-    letter-spacing: 6px;
-}
-
-.head_image {
-    margin-top: 1%;
-    margin-right: 2%;
-}
-
-.college-image:hover {
-    transform: scale(1.1);
-    transition: transform 1s;
-}
-
-@keyframes mymove {
-    from {
-        background-color: white;
-    }
-    to {
-        background-color: black;
-    }
-}
-
-@keyframes move {
-    50% {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-}
-
-.course_details {
-    background-color: black;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    border: 2px solid white;
-}
-
-.course_details:hover {
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-    cursor: pointer;
-}
-
-a:link {
-    background-color: black;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    border: 2px solid white;
-    font-weight: 500;
-}
-
-a:visited {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-}
-
-a:hover {
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.hov {
-    position: fixed;
-    left: -140px;
-    top: 50%;
-    width: 160px;
-    height: 170px;
-    font-size: 25px;
-    text-align: center;
-    background-color: orange;
-    color: black;
-    padding: 10px;
-    border-radius: 10px 10px 0px 0px;
-    border: 2px solid black;
-    transform: rotate(90deg);
-    z-index: 100;
-    transition: all .5s;
-    cursor: pointer;
-}
-
-.hov img {
-    transform: rotate(-90deg);
-}
-
-.hov-open {
-    left: 0;
-}
-
-a.upGoingArrow {
-    background-color: white;
-    padding-top: 20px;
-    border-radius: 20px;
-}
-
-.upGoingArrow {
-    position: sticky;
-    top: 93%;
-    left: 90%;
-    z-index: 10;
-}
-
-.upGoingArrow img {
-    transform: rotate(-90deg);
-    z-index: -10;
-}
-
-.nav-in {
-    font-size: 18px;
-    padding: 8px 5px;
-    color: black;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.nav-in:hover {
-    background-color: black;
-    color: white;
-    border-radius: 15px;
-}
-
-h2 {
-    width: 60%;
-    float: left;
-}
-
-img {
-    border-radius: 20px;
-}
-
-figcaption {
-    font-size: 25px;
-}
-
-.left {
-    float: left;
-    position: relative;
-    left: 10%;
-    z-index: 1;
-}
-
-#a img:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px white;
-    transition: .5s;
-}
+/* Start of Dropdown Courses */
 
 .dropdown {
     position: relative;
@@ -359,6 +235,389 @@ figcaption {
     vertical-align: middle;
 }
 
+
+/* End of Dropdown Courses */
+
+
+/* End of header */
+
+
+/* Title and Logo */
+
+#title {
+    width: 50%;
+    margin-right: 20%;
+    background: black;
+    border-radius: 20px;
+    color: aliceblue;
+    top: 0;
+    animation: mymove 7s;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Rampart One', cursive;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px;
+    font-size: 75px;
+    padding: 10px;
+    text-shadow: 0px 0px 10px white;
+}
+
+.caption {
+    font-size: 20px;
+    font-family: sans-serif;
+    color: rgb(131, 134, 138);
+    position: absolute;
+    top: 210px;
+    left: 37%;
+    letter-spacing: 6px;
+}
+
+
+/* End of title and logo */
+
+
+/* End of header and nav-bar */
+
+
+/* Start of main page css */
+
+#marquee1 {
+    font-style: italic;
+    z-index: -10;
+    border-radius: 10px;
+    background-color: white;
+    animation: marquee 20s infinite;
+    animation-timing-function: linear;
+    height: 30px;
+    width: 130%;
+}
+
+#marquee1 span {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    height: 10px;
+}
+
+.gif {
+    animation: move 6s infinite;
+    vertical-align: middle;
+    margin-left: 7%;
+}
+
+.gifMarquee {
+    margin-top: 3%;
+    width: 110%;
+    animation: marquee 17s infinite;
+    animation-timing-function: linear;
+}
+
+.gifMarquee img {
+    transform: scaleX(-1);
+}
+
+
+/* Start of achievements */
+
+.placementsContainer {
+    margin: 1% 9%;
+}
+
+.placementsContainer img {
+    width: 95%;
+    border-radius: 10px;
+}
+
+.placementsContainer span {
+    font-size: 25px;
+}
+
+.placements {
+    margin-top: 10%;
+    font-size: 35px;
+    color: white;
+    position: relative;
+}
+
+.mainPartners {
+    color: white;
+    margin-top: 3%;
+}
+
+.mainPartners p {
+    display: flex;
+    justify-content: center;
+}
+
+.mainPartners #partnersCaption {
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.placementsContainer .placements::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    background-color: blue;
+    bottom: -3%;
+    left: 50%;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.placements:hover::before {
+    left: -7%;
+    width: 310px;
+}
+
+.mainPartners p::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    background-color: blue;
+    bottom: -3%;
+    left: 50%;
+    height: 3px;
+    transition: 0.5s;
+}
+
+.mainPartners:hover p::after {
+    left: -7%;
+    width: 310px;
+}
+
+.aboutUs {
+    font-size: 20px;
+    font-family: serif;
+    margin-top: 20%;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0% 2%;
+}
+
+.content p {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 45%;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    line-height: 30px;
+    text-indent: 100px;
+    width: 40%;
+}
+
+.content p img {
+    float: left;
+}
+
+
+/* /-End of achievements */
+
+.head_image {
+    margin-top: 1%;
+    margin-right: 2%;
+}
+
+.mainImageContainer {
+    position: relative;
+    display: inline-block;
+}
+
+#mainImageCaption {
+    color: white;
+    background-color: rgba(63, 62, 62, 0.8);
+    padding: 5px;
+    font-size: 27px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    right: 27%;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.college-image:hover {
+    transform: scale(1.05);
+    transition: transform 1s;
+}
+
+.mainImageContainer:hover #mainImageCaption {
+    top: 60%;
+    opacity: 1;
+}
+
+.mainImageContainer:hover .college-image {
+    filter: blur(2px);
+}
+
+@keyframes mymove {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes move {
+    50% {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+}
+
+a:link {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+    font-weight: 500;
+}
+
+a:visited {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+a:hover {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.contentOfPage {
+    background-color: #333;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight: 200;
+    transform: translateY(50px);
+}
+
+.contentOfPage.two {
+    height: 70px;
+    float: right;
+}
+
+.hov {
+    position: fixed;
+    left: -140px;
+    top: 50%;
+    width: 160px;
+    height: 170px;
+    font-size: 25px;
+    text-align: center;
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    transform: rotate(90deg);
+    z-index: 10;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.hov img {
+    transform: rotate(-90deg);
+}
+
+.hov-open {
+    left: 0;
+}
+
+a.upGoingArrow {
+    background-color: white;
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+.upGoingArrow {
+    position: sticky;
+    top: 93%;
+    left: 90%;
+    z-index: 10;
+}
+
+.upGoingArrow img {
+    transform: rotate(-90deg);
+    z-index: -10;
+}
+
+.nav-in {
+    font-size: 18px;
+    padding: 8px 5px;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav-in:hover {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+
+/* Interior Images  */
+
+#collegeImages {
+    padding: 1%;
+}
+
+#collegeImages table {
+    text-align: center;
+    margin-left: 12%;
+    box-sizing: border-box;
+}
+
+#collegeImages td,
+th {
+    padding: 40px 70px;
+}
+
+#collegeImages img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px white;
+    transition: .5s;
+}
+
+#collegeImages figcaption {
+    opacity: 0;
+    color: white;
+    position: absolute;
+    font-weight: 500;
+    font-size: 25px;
+    transform: translateY(-50px);
+    transition: 0.4s;
+}
+
+#collegeImages figure img:hover~figcaption {
+    opacity: 1;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+
+/* End of Interior Images */
+
 #foot {
     width: 100%;
     height: 20%;
@@ -382,17 +641,6 @@ figcaption {
     height: 3px;
 }
 
-#marquee1 {
-    font-style: italic;
-    z-index: -10;
-    border-radius: 10px;
-    background-color: white;
-    animation: marquee 20s infinite;
-    animation-timing-function: linear;
-    height: 30px;
-    width: 130%;
-}
-
 @keyframes marquee {
     from {
         transform: translateX(100%);
@@ -402,9 +650,106 @@ figcaption {
     }
 }
 
-#marquee1 span {
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    height: 10px;
+
+/* Start of fixed Social media links */
+
+.toolTipContainer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: -20px;
+    top: 40%;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+.toolTipContainer .icon {
+    margin: 0px 20px;
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.toolTipContainer .icon span {
+    background-color: white;
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    padding: 5px;
+    line-height: 60px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.toolTipContainer .icon .tooltip {
+    background-color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+    box-shadow: -5px 3px 5px rgba(255, 249, 249, 0.5);
+    position: absolute;
+    right: 50%;
+    transform: translateY(65px);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.toolTipContainer .icon .tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: 28%;
+    left: 91%;
+    width: 15px;
+    height: 15px;
+    z-index: 0;
+    background-color: white;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+
+.toolTipContainer .icon:hover .tooltip {
+    opacity: 1;
+    top: -50px;
+    right: 105%;
+}
+
+.icon:hover {
+    color: white;
+}
+
+.facebook:hover .tooltip,
+.facebook:hover span,
+.facebook:hover .tooltip::before {
+    background-color: #4b74cc;
+}
+
+.twitter:hover .tooltip,
+.twitter:hover span,
+.twitter:hover .tooltip::before {
+    background-color: #46C1F6;
+}
+
+.instagram:hover .tooltip,
+.instagram:hover span,
+.instagram:hover .tooltip::before {
+    background-color: #e1306c;
+}
+
+.youtube:hover .tooltip,
+.youtube:hover span,
+.youtube:hover .tooltip::before {
+    background-color: #DE463B;
+}
+
+.icon a:hover {
+    text-decoration: none;
+}
+
+.icon a:link {
+    text-decoration: none;
+}
+
+
+/* End of social media links */

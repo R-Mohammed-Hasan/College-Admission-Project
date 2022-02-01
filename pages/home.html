@@ -7,175 +7,281 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Rampart+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/college.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title> College Home Page</title>
+    <link rel="stylesheet" href="./../assets/css/slick.css">
+    <link rel="stylesheet" href="./../assets/css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/college.css">
+    <script>
+        alert("Welcome to Ten Dots Unviersity");
+    </script>
 </head>
 
 <body align="center">
-    <div id="top"></div>
-
     <header>
         <div class="nav-bar" onclick="navBar()">
-            <em id="icon" class="fas fa-bars"></em>
+            <div class="navIcons">
+                <em id="icon" class="fas fa-bars" title="Close Nav-bar"></em>
+                <em class="fas fa-times" title="Close Nav-bar"></em>
+            </div>
             <hr>
-            <div class="nav-head" onclick="hasLoggedIn('Student details.html')">Apply For a Course</div>
+            <div class="nav-head" onclick="window.open('signUp.html')">Sign Up</div>
+            <hr class="nav-line">
+            <div class="nav-head" onclick="hasLoggedIn('studentDetails.html')">Apply For a Course</div>
             <hr class="nav-line">
             <div class="nav-head" onclick="hasLoggedIn('reviews.html')">Review Us</div>
             <hr class="nav-line">
             <div class="nav-head" onclick="adminError('addCourse.html')">Add Course</div>
             <hr class="nav-line">
-            <div class="nav-head" onclick="adminError('adminCourseDetails.html')">Edit Course</div>
+            <div class="nav-head" onclick="adminError('courseDetails.html')">Edit Course</div>
             <hr class="nav-line">
-            <div class="nav-head" onclick="adminError('adminCourseDetails.html')">Delete Course</div>
+            <div class="nav-head" onclick="adminError('courseDetails.html')">Delete Course</div>
             <hr class="nav-line">
             <div class="nav-head" onclick="adminError('displayDetailsToAdmin.html')">View Student Details</div>
             <hr class="nav-line">
-            <div id="logout" class="logout" onclick="logOut()">
+            <div id="logout" class="nav-head logout" onclick="logOut()">
                 <em class="fas fa-sign-out-alt"></em> Logout
             </div>
         </div>&nbsp;&nbsp;
 
         <div class="header first" title="Click on me; not around me">
-            <a href='login.html'><img alt="Login Image" src="../assets/html images/login_icon.svg">LOGIN</a>
+            <a href='login.html'><img alt="Login Image" src="../assets/images/login_icon.svg">LOGIN</a>
         </div>
         <div class="header" title="Click on me; not around me">
-            <a href='Sign up.html'><img alt="Sign Up Image" src="../assets/html images/sign_up_icon.svg">SIGN UP</a>
+            <a href='about.html'><img alt="About Us" src="../assets/images/about.svg">ABOUT US</a>
         </div>
-        <div class="header" title="Click on me; not around me">
-            <a href='reviews.html'><img alt="Support Image" src="../assets/html images/support.svg">REVIEW US</a>
+        <div class="header" title="Click on me; not around me" onclick="hasLoggedIn('./reviews.html')">
+            <img alt="Support Image" src="../assets/images/support.svg">REVIEWS
         </div>
-        <div class="header" title="Click on me; not around me">
-            <a href='About.html'><img alt="About Us" src="../assets/html images/about.svg">ABOUT US</a>
-        </div>
+
         <div class="header" title="Click on me; not around me">
             <div class="dropdown" id="dropdown">
-                <a href="userCourseDetails.html" target="_blank" title="Click me" style="cursor: pointer;padding: 0%;"><img alt="Course Details" src="../assets/html images/courses.png" width="6%">COURSE DETAILS</a>
+                <a href="courseDetails.html" target="_blank" title="Click me" style="cursor: pointer;;"><img alt="Course Details" src="../assets/images/courses.png" width="6%">COURSE DETAILS</a>
                 <div class="dropdown-content" id="dropdown-content">
                     <dl>
                         <h2>
-                            <dt class="courses_head"><img alt="Arrow Image" src="../assets/html images/arrow.svg"
+                            <dt class="courses_head"><img alt="Arrow Image" src="../assets/images/arrow.svg"
                                     style="border:2px solid grey">Engineering Department</dt>
                         </h2><br><br><br><br>
                         <hr class="hr">
-                        <dd class="courses"><a href="userCourseDetails.html">Mechanical Engineering</a></dd>
-                        <dd class="courses"><a href="userCourseDetails.html">Civil Engineering</a></dd>
-                        <dd class="courses"><a href="userCourseDetails.html">Computer Engineering</a></dd>
-                        <dd class="courses"><a href="userCourseDetails.html">IT Engineering</a></dd>
-                        <dd class="courses"><a href="userCourseDetails.html">Electrical and Electronics Engineering</a>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=0" target="_blank">Mechanical Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=7" target="_blank">Civil Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=3" target="_blank">Computer Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=4" target="_blank">IT Engineering</a></dd>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=1" target="_blank">Electrical and Electronics Engineering</a>
                         </dd>
-                        <dd class="courses"><a href="userCourseDetails.html">Electronics and Communication
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=2" target="_blank">Electronics and Communication
                                 Engineering</a></dd>
                         <h2>
-                            <dt class="courses_head"><img alt="Arrow Image" src="../assets/html images/arrow.svg"
+                            <dt class="courses_head"><img alt="Arrow Image" src="../assets/images/arrow.svg"
                                     style="margin-right:10px;border:2px solid grey">Arts Department</dt>
                         </h2><br><br><br><br>
                         <hr class="hr">
-                        <dd class="courses"><a href="userCourseDetails.html">Bachelor of Business Administration</a>
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=8" target="_blank">Bachelor of Business Administration</a>
                         </dd>
-                        <dd class="courses"><a href="userCourseDetails.html">Bachelor of Management Studies</a></dd>
-
+                        <dd class="courses"><a href="courseDetails.html?courseIndex=9" target="_blank">Bachelor of Management Studies</a></dd>
                     </dl>
-
                 </div>
             </div>
         </div>
-        <div class="header"><img alt="Newsletter" src="../assets/html images/newsletter.png" width="7%">NEWS LETTER
+        <div class="header" title="Click on me; not around me">
+            <a href='#placements'><img alt="Placements" src="../assets/images/placement.svg">PLACEMENTS</a>
         </div>
-        <div class="header"><img alt="Notifications" id="notification_icon" src="../assets/html images/notification_on.svg" onclick="notification()">NOTIFICATIONS</div>
+        <div class="header"><img alt="Newsletter" src="../assets/images/newsletter.png" width="7%">ACHIEVEMENTS
+        </div>
+        <div class="header" onclick="notification()"><img alt="Notifications" id="notification_icon" src="../assets/images/notification_on.svg">NOTIFICATIONS</div>
         <br /><br /><br /><br />
     </header>
     <div class="heading" style="width: 100%;margin-left: 7%;">
         <h1 title='About Ten Dots University'>
-            <img alt="College Icon" src="../assets/html images/university.png" class="head_image" width="60px" height="70px">
+            <img alt="College Icon" src="./../assets/images/tendots_icon.png" class="head_image" width="100px" height="80px">
             <span id="title">
                     TEN DOTS UNIVERSITY
                 </span>
             <div class="caption">Do Or Try, Students</div>
-
         </h1>
     </div>
-
     <h2>
         <div id="marquee1">
             <span>
                     Admissions for 2021-2022 has been started from October 1st. If you want to join our college, then go
-                    to
-                    the college and meet the officials
-                </span>
+                    to the college and meet the officials
+             </span>
         </div>
     </h2>
     <br /><br />
-
-    <h2 title='About our university' style="background-color:#333;color:white; border-radius:15px;padding:10px;">
+    <h2 title='About our University' class="contentOfPage">
         The first version of TEN DOTS University formed in 1978 and various governments repeatedly kept changing the varsity's structure and affiliation scope.
     </h2><br><br>
-    <img class="college-image" alt="College Image" src="../assets/html images/college2.jpg" width='600px' height='350px' style="vertical-align:middle;border-radius:15px;">
+    <div class="mainImageContainer">
+        <img class="college-image" alt="College Image" src="../assets/images/college2.jpg" width='600px' height='350px' style="vertical-align:middle;border-radius:15px;">
+        <div id="mainImageCaption">College Overview Image</div>
+    </div>
     <br /><br />
 
-    <div class="hov" onclick="show()"> Apply Now <img alt="Arrow Image" src="../assets/html images/arrow.svg" style="box-shadow: 0px 0px 15px;">
+    <div class="hov" onclick="showApplyCourseBar()"> Apply Now <img alt="Arrow Image" src="../assets/images/arrow.svg" style="box-shadow: 0px 0px 15px;">
         <hr>
-        <p class="nav-in" onclick="hasLoggedIn('Student details.html');"> B.Tech / M.Tech </p>
+        <p class="nav-in" onclick="hasLoggedIn('studentDetails.html');"> B.Tech / M.Tech </p>
         <hr>
-        <p class="nav-in" onclick="hasLoggedIn('Student details.html');">B.E / M.E</p>
+        <p class="nav-in" onclick="hasLoggedIn('studentDetails.html');">B.E / M.E</p>
     </div>
-    <h2 style="background-color:#333;color:white;border-radius:15px;height:70px;margin-right:7%;float:right;position:relative;top:100px;padding:10px;">
+    <h2 class="contentOfPage two">
         Students spend time only on Books and become stressed. So we are going to change it and make a drastic change on our students.
-    </h2><br />
-    <img CLASS="gif" alt="Gif" src="../assets/Gifs/college.gif">
-    <br />
+    </h2>
+
+    <img CLASS="gif" alt="Gif" src="../assets/gifs/college.gif" id="placements">
+    <div class="placements">Placements</div>
+    <div class="placementsContainer">
+        <div class="slide">
+            <img src="./../assets/images/achievements/accenture.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/autodesk.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/csc.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/excela.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/gobdTech.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/mindtree.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/scope.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/tcs.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/tychons.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/vernilas.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="./../assets/images/achievements/wipro1.png" alt="">
+        </div>
+
+    </div>
+    <br>
+    <div class="mainPartners">
+        <p id="partnersCaption">Our Main Partners</p>
+        <p>
+            <img src="./../assets/images/achievements/fresh.png" alt="" width="40%" height="20%">
+            <img src="./../assets/images/achievements/zoho.png" alt="" width="40%" height="20%">
+        </p>
+    </div>
+    <a href="#" class="upGoingArrow">
+        <img src="./../assets/images/arrow.svg" alt="">
+    </a>
     <div class="gifMarquee">
         <h2 style="background:white;width:70%;border-radius: 20px;">
-            <img alt="Gif" src="../assets/Gifs/college2.gif" style="vertical-align:middle;background:white;"> We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
+            <img alt="Gif" src="../assets/gifs/college2.gif" style="vertical-align:middle;background:white;"> We don't insist students to carry bag full of books. Instead we teach in such a way that they don't need books
         </h2>
     </div>
-    <a href="#top" class="upGoingArrow">
-        <img src="./../assets/html images/arrow.svg" alt="">
-    </a>
-    <div id="a" style="padding:1%">
-        <figure class="left"><img alt="College Images" src="../assets/html images/college5.jpg" width='400px' height='400px'>&nbsp
-            <br /><br />
-            <figcaption style="color:white;font-weight:500;">Our Class rooms</figcaption>
-        </figure>
-        <figure><img alt="College Images" src="../assets/html images/college6.jpg" width='400px' height='400px'>&nbsp
-            <br /><br />
-            <figcaption style="color:white;font-weight:500;">Our Physics Laboratory</figcaption>
-        </figure><br /><br />
-        <figure class="left"><img alt="College Images" src="../assets/html images/colllege7.jpg" width='400px' height='400px'>&nbsp
-            <br /><br />
-            <figcaption style="color:white;font-weight:500;">Our Library</figcaption>
-        </figure>
-        <figure><img alt="College Images" src="../assets/html images/lab.jpg" width='400px' height='400px'>
-            <br /><br />
-            <figcaption style="color:white;font-weight:500;">Our Chemistry Laboratory</figcaption>
-        </figure>
+
+    <div class="aboutUs">
+        <div class="content one">
+            <p><img src="./../assets/images/vision.png" alt="" width="15%"> To make Ten DOTS University a well established world class Research and Development centre in the field of Science and Technology and to become a reputed Institution with academic
+                excellence in the country.
+            </p>
+            <p><img src="./../assets/images/mission.png" alt="" width="15%"> Magnifying the quality of education and maintaining the university as an effective technical Institution that can accommodate ever changing societal and industrial demands.Discharging
+                duties and obligations to the students, staff, parents and the society effectively.</p>
+        </div><br>
+        <div class="content two">
+            <p><img src="./../assets/images/quality.png" alt="" width="15%"> The right to education is not only the right to access education but also the right to receive an education of good quality. Education must be available and accessible.</p>
+            <p><img src="./../assets/images/service.png" alt="" width="15%"> To establish a centre of excellence in Technical Education. To bring out technocrats with superior skill and social commitment. To transform youth into good technologists.</p>
+        </div>
+    </div>
+
+    <div id="collegeImages" title="Hover over images">
+        <table>
+            <caption></caption>
+            <tr>
+                <th scope="col">
+                    <figure class="left"><img alt="College Images" src="../assets/images/college5.jpg" width='400px' height='400px'>&nbsp
+
+                        <figcaption>Our Class rooms</figcaption>
+                    </figure>
+                </th>
+                <th scope="col">
+                    <figure><img alt="College Images" src="../assets/images/college6.jpg" width='400px' height='400px'>&nbsp
+                        <figcaption>Our Physics Laboratory</figcaption>
+                    </figure>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <figure class="left"><img alt="College Images" src="../assets/images/colllege7.jpg" width='400px' height='400px'>&nbsp
+
+                        <figcaption>Our Library</figcaption>
+                    </figure>
+                </td>
+                <td>
+                    <figure><img alt="College Images" src="../assets/images/lab.jpg" width='400px' height='400px'>
+                        <figcaption>Our Chemistry Laboratory</figcaption>
+                    </figure>
+                </td>
+            </tr>
+        </table>
 
     </div>
 
-    <br /><br /><br />
-    <video poster="../assets/html images/POSTER.jpg" width='50%' height='30%' controls style="border-radius:15px;">
-
-    <source src="../assets/videos/poster.mp4">
-    <track kind="subtitles"></track>
-    </video>
-
     <br /><br />
+    <div class="toolTipContainer">
+        <div class="icon facebook" onclick="socialMedia('facebook')">
+
+            <div class="tooltip">Facebook</div>
+            <span><em class="fab fa-facebook-f"></em></span>
+        </div>
+
+        <div class="icon twitter" onclick="socialMedia('twitter')">
+            <div class="tooltip">Twitter</div>
+            <span><em class="fab fa-twitter"></em></span>
+        </div>
+        <div class="icon instagram" onclick="socialMedia('instagram')">
+            <div class="tooltip">Instagram</div>
+            <span><em class="fab fa-instagram"></em></span>
+        </div>
+        <div class="icon youtube" onclick="socialMedia('youtube')">
+            <div class="tooltip">YouTube</div>
+            <span><em class="fab fa-youtube"></em></span>
+        </div>
+    </div>
     <hr class="hr-foot">
 
     <footer id="foot">
-        Ten Dots University. © All Copyrights reserved.<br />
-        <img alt="Call Icon" src="../assets/html images/call.png" width="20px" height="20px">&nbsp&nbspContact No:9876543210
+        Ten Dots University Official. © All Copyrights reserved.<br />
+        <img alt="Call Icon" src="../assets/images/call.png" width="20px" height="20px">&nbsp&nbspContact No:9876543210
         <br />
-        <img alt="Mail Icon" src="../assets/html images/mail.jpg" width="20px" height="20px">&nbsp&nbspE-mail: tendots.univ@gmail.com
+        <img alt="Mail Icon" src="../assets/images/mail.jpg" width="20px" height="20px">&nbsp&nbspE-mail: tendots.univ@gmail.com
     </footer>
     <hr class="hr-foot">
 
 
-
     <script src="./../assets/js/home.js"></script>
     <script src="./../assets/js/error.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./../assets/js/slick.min.js"></script>
+    <script>
+        $('.placementsContainer').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            focusOnSelect: true
+        });
+    </script>
 </body>
 
 </html>

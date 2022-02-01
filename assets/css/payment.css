@@ -6,7 +6,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     letter-spacing: 2px;
-    background-image: linear-gradient(45deg, rgba(255, 241, 43, 0.6), rgb(165, 250, 221), rgba(116, 113, 113, 0.6));
+    background-image: linear-gradient(45deg, rgba(255, 241, 43, 0.6), rgb(165, 250, 221), rgba(216, 212, 163, 0.6));
 }
 
 h1 {
@@ -58,9 +58,9 @@ input:focus {
 }
 
 .submit {
-    margin-left: 8%;
+    margin-left: 2%;
     font-size: 20px;
-    padding: 10px 60px;
+    padding: 10px 40px;
     border-radius: 5px;
     cursor: pointer;
     background-image: linear-gradient(to top, rgb(2, 226, 226), rgba(131, 128, 128, 0.4));
@@ -129,6 +129,8 @@ img {
     font-size: 20px;
     font-weight: bold;
     font-family: fantasy;
+    width: 73%;
+    overflow-x: auto;
 }
 
 .expiry {

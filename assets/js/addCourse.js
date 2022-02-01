@@ -1,4 +1,7 @@
-function onSubmitHandler() {
+// Gets entered values and stores it in Local Storage as a new Course
+
+function onSubmitHandler(event) {
+    event.preventDefault()
     let courseName = document.getElementById("courseName").value;
     let image = document.getElementById("image").value;
     let caption = document.getElementById("caption").value;
@@ -22,7 +25,21 @@ function onSubmitHandler() {
     }
     let array = [];
     array = JSON.parse(localStorage.getItem("allCourses"));
-    array.push(courseDetails);
-    localStorage.setItem("allCourses", JSON.stringify(array));
-    window.location.href = "./Fees.html";
+    let i = 0;
+    let isExist;
+    for (i of array) {
+        if (i.name.toLowerCase() == courseName.toLowerCase()) {
+            isExist = true;
+            break;
+        } else {
+            isExist = false;
+        }
+    }
+    if (!isExist) {
+        array.push(courseDetails);
+        localStorage.setItem("allCourses", JSON.stringify(array));
+        window.location.href = "./courseDetails.html";
+    } else {
+        document.querySelector("#errorMessage").innerHTML = `<font color=red>Sorry, this course already exists  !!</font>`;
+    }
 }

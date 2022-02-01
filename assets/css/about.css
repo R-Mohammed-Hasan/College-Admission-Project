@@ -1,13 +1,19 @@
 #about {
     background-color: aqua;
-    margin: 0;
     border-radius: 10px;
     color: black;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 body {
     overflow-x: hidden;
+    background-image: linear-gradient(to bottom, rgb(102, 96, 96), white, rgb(124, 118, 118));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    margin: 1% 45%;
+    width: 100%;
 }
 
 .hr {
@@ -18,7 +24,7 @@ p {
     background-color: white;
     border-radius: 15px;
     width: 50%;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.5;
     float: left;
     animation: mymove 3s infinite;
@@ -32,22 +38,45 @@ p {
     }
 }
 
-div img:not(.slides img) {
+div img:not(.glider-contain img) {
     margin-left: 15%;
     border-radius: 5%;
 }
 
-.glider-prev,
-.glider-next {
-    margin: 10%;
-    border: 2px solid black;
+video {
+    margin: 5% 15%;
 }
 
-.glider img {
-    width: 70%;
+.captions {
+    font-size: 22px;
+    background-color: white;
+    height: 100px;
+    border-radius: 15px;
+    padding: 10px;
+    line-height: 40px;
 }
 
-h1 {
-    margin: 1% 50%;
+.captions.one {
+    float: left;
+    margin-left: 80px;
+    margin-top: 5%;
+    width: 40%;
+    padding: 20px;
+}
+
+#captionTwo {
+    float: right;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    width: 50%;
+    margin-right: 5%;
+}
+
+
+/* why height is not changing even in inline styling  */
+
+.slide img {
     width: 100%;
+    height: 100%;
 }

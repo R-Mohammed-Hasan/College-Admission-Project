@@ -10,22 +10,21 @@ body {
     border-radius: 10px;
     color: white;
     border: 2px solid white;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .left {
     background: skyblue;
     width: 40%;
-    height: 43%;
+    height: 54%;
     position: absolute;
     z-index: 100;
-    top: 25%;
+    top: 20%;
     right: 10%;
     border-radius: 20px;
     text-align: center;
-    font-family: 'Lobster', cursive;
+    font-family: sans-serif;
     font-size: 20px;
-    /* box-shadow: 0px 0px 40px white; */
     animation: move 3s infinite;
 }
 
@@ -60,7 +59,7 @@ body {
 }
 
 input {
-    padding: 9px;
+    padding: 7px;
     border-radius: 20px;
     font-family: 'Lobster', cursive;
     font-size: 20px;
@@ -96,4 +95,8 @@ img {
 input[type='tel']:focus {
     box-shadow: 0px 0px 7px inset;
     transition: 0.3s;
+}
+
+#error {
+    display: none;
 }

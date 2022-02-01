@@ -1,3 +1,6 @@
+// Displays the details entered by user every 0.2s in the card by getting the value entered by user 
+// and displaying it in card
+
 function showDetailsInCard() {
     let cardNumber1 = document.getElementById("cardNumber1").value;
     let cardNumber2 = document.getElementById("cardNumber2").value;
@@ -12,8 +15,5 @@ function showDetailsInCard() {
     document.getElementById("displayCardNumber4").innerHTML = cardNumber4;
     document.getElementById("displayName").innerHTML = cardName;
     document.getElementById("displayExpiry").innerHTML = `${expiryMonth} / ${expiryYear}`;
-
-
-
 }
 setInterval(showDetailsInCard, 200);
