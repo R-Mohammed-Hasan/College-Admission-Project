@@ -1,7 +1,7 @@
 # Ten DOTS University
 
 ### Netlify :
-   * Link : https://10dotuniversityapp-ui-mohammedhasan.netlify.app/
+   * Link : https://fwsa-batch2.github.io/mohammed.hasan__web_project/
 
 ### Features :
    * Login
